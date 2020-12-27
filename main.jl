@@ -46,29 +46,16 @@ features = copy(features')
 # kmeans function
 result = kmeans(features,3); # run K-means for 3 clusters
 
-# plot the acceleration vs mpg
-p2 = scatter(df.Acceleration, df.Miles_per_Gallon, marker_z=result.assignments,
-        color=:lightrainbow, legend=false)
-plot(p2,
-    xlabel = "Acceleration",
-    #xlims = (0,10),
-    #xticks = 0:0.5:10,
-    #xscale = :log,
-    #xflip = true,
-    font = font(20, "Courier"),
-    ylabel = "Miles per gallon"
-)
-
 # plot weight vs mpg
 p3 = scatter(df.Weight_in_lbs, df.Miles_per_Gallon, marker_z=result.assignments,
-        color=:lightrainbow, legend=false)
+        color=:lightrainbow, legend=false, dpi=300)
 plot(p3,
     xlabel = "Weight (lbs)",
     #xlims = (0,10),
     #xticks = 0:0.5:10,
     #xscale = :log,
     #xflip = true,
-    font = font(20, "Courier"),
-    ylabel = "Miles per gallon"
+    ylabel = "Miles per gallon",
+    size = (500,500)
 )
 savefig(p3,"cars.png")
