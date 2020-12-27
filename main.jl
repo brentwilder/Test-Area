@@ -56,6 +56,6 @@ plot(p3,
     #xscale = :log,
     #xflip = true,
     ylabel = "Miles per gallon",
-    size = (350,350)
+    size = (450,450)
 )
 savefig(p3,"cars.png")
