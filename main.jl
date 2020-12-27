@@ -48,7 +48,7 @@ result = kmeans(features,3); # run K-means for 3 clusters
 
 # plot weight vs mpg
 p3 = scatter(df.Weight_in_lbs, df.Miles_per_Gallon, marker_z=result.assignments,
-        color=:lightrainbow, legend=false, dpi=300)
+        color=:lightrainbow, legend=false, dpi=500)
 plot(p3,
     xlabel = "Weight (lbs)",
     #xlims = (0,10),
